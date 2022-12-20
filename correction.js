@@ -15,15 +15,35 @@
 // console.log(numberToWords(45))
 
 
-const objectArray = [
-  {firstName:"Joe", lastName:"Joy"},
-  {firstName:"Kyle", lastName:"Kansas"},
-  {firstName:"Louis", lastName:"Lousert"},
-  {firstName:"Marty", lastName:"Marmot"},
-]
+// const objectArray = [
+//   {firstName:"Joe", lastName:"Joy"},
+//   {firstName:"Kyle", lastName:"Kansas"},
+//   {firstName:"Louis", lastName:"Lousert"},
+//   {firstName:"Marty", lastName:"Marmot"},
+// ]
 
-function getPropertyName( objArray, propName ) {
-  return objArray.map(obj => obj[propName]);
-}
+// function getPropertyName( objArray, propName ) {
+//   return objArray.map(obj => obj[propName]);
+// }
 
-console.log(getPropertyName(objectArray, 'lastName'));
+// console.log(getPropertyName(objectArray, 'lastName'));
+
+const fs = require('fs');
+const http = require('http')
+
+http.createServer((httpRequest, httpReponse) => {
+  fs.readFile('test.txt', 'utf-8', (err, data) => {
+    if (err) {
+      console.log(err)
+
+      httpReponse.statusCode = 500;
+      httpReponse.end('an errror has occured');
+      return;
+    }
+
+    httpReponse.setHeader('Content-type','text/plain');
+    httpReponse.end(data)
+  })
+}).listen(3002, () => {
+  console.log("server web listening on por 3002")
+})
