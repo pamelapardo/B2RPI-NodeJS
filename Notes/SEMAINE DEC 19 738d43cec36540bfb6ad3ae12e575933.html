@@ -1,0 +1,759 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>SEMAINE DEC 19</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="738d43ce-c365-40bf-b6ad-3ae12e575933" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🗓️</span></div><h1 class="page-title">SEMAINE DEC 19</h1></header><div class="page-body"><h2 id="46c71d28-99b2-4eaf-8fd2-5c94b1a70183" class=""><strong>NodeJS</strong>. Travail individuel.</h2><blockquote id="846ee00c-71a6-4748-a230-7032b1f2e71f" class="block-color-gray_background"><span style="border-bottom:0.05em solid"><strong>Mounir BENDAHMANE</strong></span></blockquote><p id="6e6ee0da-4d6e-47e2-b0dd-a279752e94c4" class="">
+</p><p id="b8a398dd-e542-4118-8e11-97890566707d" class="">Pour installer NodeJS on peut le faire directement depuis leur site(), sinon avec la commande nvm si on l’a déjà installé dans le pc (pour pouvoir utiliser nvm, il ne faut pas avoir NodeJS installé):</p><pre id="807c7279-1815-44e3-9678-74fe2519d5ca" class="code"><code>nvm install 18.12.1</code></pre><hr id="37af3cf6-3a49-4513-b79f-dbacbdac52a8"/><h2 id="5e67b581-69c1-4206-9547-602b79f83f3e" class="">Cours</h2><p id="683d4576-ec20-484f-b691-78b0e310bbc1" class=""><strong>Objectif de la semaine:</strong></p><ul id="bb3d509d-0d39-40ac-9bff-bf6cc37dad73" class="bulleted-list"><li style="list-style-type:disc">Créer des APIs REST avec NodeJS et le framework Express.</li></ul><ul id="5cc6168d-cdd9-467a-8272-d167324bf636" class="bulleted-list"><li style="list-style-type:disc">Documenter et structurer correctement votre code.</li></ul><ul id="2263cd9a-134b-47f1-97cf-fffb956d3f22" class="bulleted-list"><li style="list-style-type:disc">Travailler en équipe sur un projet Node.js</li></ul><ul id="4626fb7f-86f0-4dc6-9a7a-2fae686b414f" class="bulleted-list"><li style="list-style-type:disc">Deployer une appli Node.js</li></ul><p id="7a42afb2-6140-4901-b980-e1907764d577" class="">
+</p><figure id="4c328076-ad1b-412c-8cff-53aae8e706cf" class="image"><a href="SEMAINE%20DEC%2019%20738d43cec36540bfb6ad3ae12e575933/Screenshot_2022-12-19_at_10.11.31.png"><img style="width:503px" src="SEMAINE%20DEC%2019%20738d43cec36540bfb6ad3ae12e575933/Screenshot_2022-12-19_at_10.11.31.png"/></a></figure><p id="abbc7c8f-305f-4bec-bc65-e57859c2179c" class="">Travail de la semaine: Site qui tourne grace à node.js</p><p id="5cd6ab9b-c047-4f70-8cb4-ed8cc0b5b6f4" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="6aa6a2c3-0714-4a56-bf29-060a82951f6e"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Travailler cette semaine en anglais et en camelCase</div></figure><hr id="1ef33a54-568a-4885-ae69-18cdc3ef02c2"/><h2 id="9d492136-f7ce-47bc-8e5f-2dddc031a3de" class="">Definitions</h2><ul id="7e793f4f-8659-4906-8a5d-496fc407f640" class="toggle"><li><details open=""><summary><strong>ETS</strong></summary><p id="b18c8818-3d36-40d7-88cd-98a2e0172cd2" class=""> Version majeur qui va rester pour quelques ans </p></details></li></ul><ul id="3b894a33-fbff-4ed7-b7b5-5119348c0464" class="toggle"><li><details open=""><summary><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>JavaScript</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></summary><p id="ab513e25-c1ad-440d-8757-a67961ab2982" class="">C’est un langage qui permet de rendre un site web dynamique.</p></details></li></ul><ul id="a1b40581-c520-4cd7-a488-a488e5846329" class="toggle"><li><details open=""><summary><strong><strong><strong><strong><strong><strong><strong>Node.js</strong></strong></strong></strong></strong></strong></strong></summary><p id="9510f471-144a-4d28-886b-5eae6f035a91" class="">Un evironnement d’execution open-source, multiplateforme qui permet d’executer du JS sur un serveur. Cet environnement est destiné a être utilisé en dehors du navigateur (directement sur la machine , système d’exploitation). Aussi, Node ne permet pas d’utiliser les API JavaScript liées au navigateur mais des APIs utilisées sur un serveur dont notamment celles du HTTP ou la manipulation de systèmes de fichier.</p></details></li></ul><ul id="2992f5ad-cb84-46b8-b151-8aad99367c6b" class="toggle"><li><details open=""><summary><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Lamp stack</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></summary><p id="10067172-0005-49a7-a4dd-40d43256dbc6" class="">Serveurs Linux, apache, Symphonie. </p></details></li></ul><ul id="69778848-dbbe-4bcb-837b-c9f6c219c59f" class="toggle"><li><details open=""><summary><strong><strong><strong><strong><strong><strong>Client</strong></strong></strong></strong></strong></strong></summary><p id="0f232b01-e396-49b6-88d5-f3b22d111a32" class="">Le poste qui dialogue avec l’application.</p><figure id="cb4212c6-f0e1-4413-8b7b-d58f1d6dca3b" class="image"><a href="SEMAINE%20DEC%2019%20738d43cec36540bfb6ad3ae12e575933/Untitled.png"><img style="width:921px" src="SEMAINE%20DEC%2019%20738d43cec36540bfb6ad3ae12e575933/Untitled.png"/></a></figure></details></li></ul><ul id="52031d9f-eb92-4fbb-834a-bf606f5c79d6" class="toggle"><li><details open=""><summary><strong><strong><strong><strong>SGBD</strong></strong></strong></strong></summary><p id="9f3fff41-0ce4-4e4d-bc15-9948b5ade83c" class="">Systeme gestion de base de données.</p></details></li></ul><ul id="1b2c1cb5-5825-434f-8e31-4ae72cf5e515" class="toggle"><li><details open=""><summary><strong>ES6</strong></summary><p id="af856d82-b218-4b6f-bdab-08d3be364360" class="">ECMAScript (version 6 dans ce cas).</p></details></li></ul><ul id="3dbe3b36-73a0-4119-ac77-6cafccbdefde" class="toggle"><li><details open=""><summary><strong><strong><strong><strong><strong><strong><strong><strong><strong>Fonctions</strong></strong></strong></strong></strong></strong></strong></strong></strong></summary><p id="332e0f6b-a1f7-4b34-bbc2-545036aec95f" class="">Ce sont des variables. Elle permet d’encapsuler une logique et la déployer.</p></details></li></ul><ul id="f920f6ed-521f-4d9c-b92a-8e099435bdac" class="toggle"><li><details open=""><summary></summary></details></li></ul><p id="4f217f22-609f-4e94-ada5-92686787527b" class="">
+</p><hr id="baad98b9-fa75-4422-9884-b58b6708eac2"/><h2 id="e1d48e7f-ce0f-4e68-a2c0-358797321dd5" class="">Comment faire</h2><p id="f0d5b271-8dc7-49f0-9bf0-3aea85cbf728" class="">Variables sur javaScript. Voici comment declarer une variable:</p><pre id="0c4ff278-ae93-4f78-9f81-74eb7aa96981" class="code"><code>var test = &quot;bonjour&quot;; //interdit cette semaine
+let test2 = &quot;le&quot;;
+const test3 = &quot;monde!&quot;;
+
+test2 = &quot;les :; // l&#x27;operateur = est un operateur d&#x27;asignation</code></pre><p id="ef03fc0c-f911-420f-9f60-03043c081e18" class="">const permet de stocker une variable qui ne va vraiment pas changer, donc cette variable utlilise un space limité dans la memoire de l’ordinateur.</p><pre id="1f838075-5f7e-47ad-9b27-d851ed276c7e" class="code"><code>// Numbers
+const age = 26;
+
+// Variable
+let x;
+
+// Text (string)
+const aRandomText = &quot;some text&quot;;
+
+// Operations
+let addition = 4 + 4;
+
+// Booleans
+let myBoolean = true;
+
+const PI = 3.14;
+
+// Objects
+let name = {firstName: &quot;Paul&quot;, lastName: &quot;Dupont&quot;};
+
+// Array
+let myArray = [&quot;Banana&quot;, &quot;Apple&quot;]</code></pre><p id="c096849a-c5ad-46a9-9e1b-45596f58a4af" class="">
+</p><p id="a33d8943-668a-4f90-9b39-fe8498967160" class="">Fonctions:</p><pre id="5db35bab-2a24-4a57-986e-1fa0ef6b6859" class="code"><code>let numOne = 1;
+let numTwo = 3;
+
+function sum(numOne, numTwo) {
+	return numOne + numTwo;
+}
+
+// Ceci est une fonction
+// numOne est un parametre (ou un argument) de la fonction sum
+// Entre les accolades se trouve le corps de la fonction, c&#x27;est là qu&#x27;est
+// stockée la logique de la fonction (il y a des noms reservées pour les
+// fonctions, il faut les eviter pour pas rencontrer des errors)
+function square(number) =&gt; {
+	return number * number;
+}
+
+// Ceci est la même function flechée (const et function sont la meme chose)
+const square = (number) =&gt; {
+	return number * number;
+}
+
+// Ceci est la même function
+const square = number =&gt; number * number;
+
+// On execute la fonction : node.exe index.js
+const number = square(2);
+console.log(number)</code></pre><p id="4d08df1b-5ea8-40a8-aea0-bd120f771e88" class="">Parcourrir un tableau:</p><pre id="f5b7997a-5970-4766-905d-d97b72a35f75" class="code"><code>// Ceci est un tableau
+const myArray = [264662, 2445, 78678, 45735, 24657, 35735, 82734928];
+
+//l&#x27;index est la position d&#x27;un element dans le tableau
+//le premier index est l&#x27;index 0
+console.log(myArray.length);
+
+// Boucle for
+for (let index = 0; index &lt; myArray.length; index++) {
+	const arrayContent = myArray[index];
+	console.log(arrayContent);
+}</code></pre><hr id="a3ea4914-4d48-45fb-a4e7-ea5b9bde1d57"/><h2 id="08c4f451-b92a-4f8e-a5af-9d306acf6ea4" class="">Conseils</h2><p id="18116f5e-9af4-423f-9a39-93a8f91d6614" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="de7162ae-fb1a-4233-bf64-9e5eccfe5432"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Conseillé d’utiliser Obsidian pour la prise de notes. L’appli crée des notes avec Markdown.</div></figure><p id="076c3bda-c3d8-4fc7-b63a-bb57df9339ce" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="285ec516-525a-4cc3-9d26-26598b024ac3"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Conseillé d’utiliser un seul langage fortement typé comme Java, C#</div></figure><p id="7c23caf4-b8a8-4c19-a80b-3f25918f5d98" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e7b2e360-16af-4188-bd64-47ce6aaf8c67"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Faire attention aux types de données car JavaScript est très permisif mais il faut quand même savoir quels sont les données qu’on manipule</div></figure><p id="ba3c2140-f4b7-44ac-afc1-e66dfeae9f46" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="70b012cb-8992-4aaf-8f74-1c48804c3ec1"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Visiter les trois tutos ici:
+<a href="https://developer.mozilla.org/fr/docs/web/JavaScript">https://developer.mozilla.org/fr/docs/web/JavaScript</a></div></figure><p id="4baebd64-7cb2-4c21-8c13-8325368669f2" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="74c5dbae-83ca-40d6-816a-79542bacef91"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Chercher des certifs Azure</div></figure><p id="40ac33f2-29a0-4e9c-addc-281ad4a3dd34" class="">
+</p><hr id="e52696d9-2202-4e88-ac9d-118ac6707164"/><h2 id="21ea1ca4-868c-4aa0-9340-166782ba19fa" class="">Exos:</h2><p id="eb88c06b-1368-4699-a818-22f5e58eb08e" class="">✅  <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Exo01.js : </strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>Ecrivez une foction qui prend un tableau de nombre en parametre et qui retourne la plus grande nombre dans le tableau</p><pre id="1a9eb387-9a6b-47c1-9b37-3cfe9e3bcae1" class="code"><code>const arrayNumbers = [0,1,3,7,4,9,6,5]
+
+function getMaxNum(numbers) {
+  let max = numbers[0]; //on declare une variable max on l&#x27;initialise avec numbers[0]
+
+  // On parcourt le tableau numbers avec un boucle for
+  for (let i = 0; i &lt; numbers.length; i++) {
+    if (numbers[i] &gt; max) {
+      max = numbers [i];
+    }
+  }
+  return max;
+}
+
+const result = getMaxNum(arrayNumbers)
+console.log(result)</code></pre><p id="859b6c9e-4983-4584-88f1-4634784d4642" class="">
+</p></div></article></body></html>
